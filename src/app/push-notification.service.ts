@@ -41,7 +41,13 @@ export class PushNotificationService {
         }
     }
     create(title: string, options ? : PushNotification): any {
+        console.log("inside push-notification.service");
+        
         let self = this;
+        console.log("self" + self);
+        console.log("self.permission:" + self.permission);
+
+        
         return new Observable(function(obs) {
             if (!('Notification' in window)) {
                 console.log('Notifications are not available in this environment');
