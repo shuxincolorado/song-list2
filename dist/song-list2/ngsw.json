@@ -1,0 +1,93 @@
+{
+  "configVersion": 1,
+  "timestamp": 1661398843441,
+  "index": "https://shuxincolorado.github.io/song-list2/dist/song-list2/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/favicon.ico",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/index.html",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/main.5a9488aa23555689.js",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/manifest.webmanifest",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/polyfills.95b09f4e67cbfbae.js",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/runtime.ffccee2310340e71.js",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/styles.eae16f0bc7bbdcf8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-128x128.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-144x144.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-152x152.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-192x192.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-384x384.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-512x512.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-72x72.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-96x96.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icons8-notification-30-red.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/images/my_logo_header.png",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/packs/public.js",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/application.css",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/application.js",
+        "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/notAdmin.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/icons/icons8-notification-30-red.png": "429f1551c100c2dbf8b82f5b2000ecfc61650257",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/images/my_logo_header.png": "98036c2a234020fb20aa53f55597dcd92fa0fb3c",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/packs/public.js": "78a5065a3c305779633e1d61803163719dee0a75",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/application.css": "6207d0851f09b82465b7f4cdcdd706a96a7fcabf",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/application.js": "d856a28e9317a6a68fa418cf6402399ca5b2520e",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/assets/traction/notAdmin.js": "95be314a21532d385cd495ea48e511d63a96a3ca",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/index.html": "6dc3db7ef698826547c803fda5863ee67714f066",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/main.5a9488aa23555689.js": "952fe25df410e0a510bb1df93f4c33b211cd077a",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/manifest.webmanifest": "868652a3a5d600f5a0eb3c781e8dcfa4e03fe3f4",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/polyfills.95b09f4e67cbfbae.js": "59b8f265eac5da49db58c9f7ed01ead4633c1c42",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/runtime.ffccee2310340e71.js": "096124c09c772f37140d03595d9b23c32b21c983",
+    "https://shuxincolorado.github.io/song-list2/dist/song-list2/styles.eae16f0bc7bbdcf8.css": "f58f55cc07a9add60c4a3ed9f5f355f848408e5d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

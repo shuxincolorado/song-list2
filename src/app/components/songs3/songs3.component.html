@@ -1,0 +1,135 @@
+<div class="row" id="date-filter">
+    <div class="col-sm-10">
+        <mat-form-field>
+            <mat-label>Released before:</mat-label>
+            <input matInput type="date" [(ngModel)]="filterDate">    
+        </mat-form-field>
+        <button (click)="applyFilter(filterDate)" class="btn button-filter" mat-button>Filter</button>&nbsp;&nbsp;<button (click)="cancelFilter()" class="btn button-filter" mat-button>Cancel</button>
+    </div>
+    <div class="col-sm-2">
+        <article class="table-header">
+            <button class="btn button-add-row" mat-button (click)="addRow()">Add New Song</button>
+        </article>
+    </div>
+</div>
+
+<div *ngIf="error===true" class='alert alert-danger'>Something is wrong. We are working on it...</div>
+<div *ngIf="dataProcessed===true" class='alert alert-info'>Information is processed successfully.</div>
+<!--
+<mat-form-field appearance="legacy" [ngClass]="disabled? 'regular' : 'disabled-box' "
+[ngStyle]="{'width.ch': myInput.value.length, 'min-width.ch': 10}"
+>
+    <input matInput #myInput [ngModel]="regularInput" >
+</mat-form-field>
+<br />
+<br />
+<mat-form-field appearance="legacy" [ngClass]="disabled? 'disabled-box' : 'regular' "
+[ngStyle]="{'width.ch': hiddenInput.value.length, 'min-width.ch': 10}"
+>
+    <input matInput #hiddenInput [ngModel]="disabledInput" [disabled]="true" >
+</mat-form-field>
+-->
+<div class="table" id="song-table">
+    <div class='theader'>
+        <!--sort directive -->
+        <div class='table_header' [appSort]="songs" data-order="desc" data-name="title" scope="col">Title</div>
+        <div class='table_header' [appSort]="songs" data-order="desc" data-name="artist" scope="col">Artist</div>
+        <div class='table_header' [appSort]="songs" data-order="desc" data-name="releaseDay" scope="col">Release&nbsp;Date</div>
+        <div class='table_header' [appSort]="songs" data-order="desc" data-name="price" scope="col">Price</div>
+        <div class='table_header'></div>
+    
+    
+    </div>
+    <div class='table_row' *ngFor="let song of songs; let i = index;">
+        <div class='table_small'>
+            <div class='table_cell' [appSort]="songs" data-order="desc" data-name="title" scope="col">Title</div>
+            <div class='table_cell'>
+                
+                <mat-form-field appearance="legacy" [ngClass]="songs[i].isEdit === false ? 'disabled-box' : 'regular' "
+                [ngStyle]="{'width.ch': 40, 'min-width.ch': 10}"
+                ><mat-label></mat-label>
+                    <input matInput [(ngModel)]="songs[i].title" 
+                    required id="title" name="title"
+                            class="form-control" #title="ngModel"
+                            [disabled]="!songs[i].isEdit"
+                            
+                        >
+                    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert">
+                        <div *ngIf="title.errors?.['required']" class="alert alert-danger">
+                            Title is required.
+                        </div>
+                    </div>
+                </mat-form-field>
+                
+            </div>
+            
+        </div>
+        <div class='table_small'>
+            <div class='table_cell' [appSort]="songs" data-order="desc" data-name="artist" scope="col">Artist</div>
+            <div class='table_cell'>
+                <mat-form-field appearance="legacy" [ngClass]="songs[i].isEdit === false ? 'disabled-box' : 'regular' "
+                [ngStyle]="{'width.ch': 20, 'min-width.ch': 10}"
+                >
+                    <mat-label></mat-label>
+                    <input matInput [(ngModel)]="songs[i].artist" required id="artist" name="artist"
+                        class="form-control" #artist="ngModel"
+                        [disabled]="!songs[i].isEdit" >
+                    <div *ngIf="artist.invalid && (artist.dirty || artist.touched)" class="alert ">
+                        <div *ngIf="artist.errors?.['required']" class="alert alert-danger">
+                            Artist is required.
+                        </div>
+                    </div>
+                </mat-form-field>
+                
+            </div>
+            
+        </div>
+        <div class='table_small'>
+            <div class='table_cell' [appSort]="songs" data-order="desc" data-name="releaseDay" scope="col">Release&nbsp;Date</div>
+            <div class='table_cell'>
+                <mat-form-field appearance="legacy" [ngClass]="songs[i].isEdit === false ? 'disabled-box' : 'regular' "
+                [ngStyle]="{'width.ch': 15, 'min-width.ch': 10}"
+                >
+                <mat-label></mat-label>
+                    <input matInput type="date" required id="releasDay" name="releaseDay" class="form-control" #releaseDay="ngModel"
+                        [(ngModel)]="songs[i].releaseDay"
+                        [disabled]="!songs[i].isEdit">
+                        <div *ngIf="releaseDay.invalid && (releaseDay.dirty || releaseDay.touched)" class="alert ">
+                            <div *ngIf="releaseDay.errors?.['required']" class="alert alert-danger">
+                                Required
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+            
+        </div>
+        <div class='table_small'>
+            <div class='table_cell' [appSort]="songs" data-order="desc" data-name="price" scope="col">Price</div>
+            <div class='table_cell'>
+                <mat-form-field appearance="legacy" [ngClass]="songs[i].isEdit === false ? 'disabled-box' : 'regular' "
+                [ngStyle]="{'width.ch': 6, 'min-width.ch': 6}"
+                ><mat-label></mat-label>
+                    <input matInput type="text" [(ngModel)]="songs[i].price" pattern="^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$"
+                        id="price" name="price" class="form-control" #price="ngModel" currencyMask
+                        [disabled]="!songs[i].isEdit" size="5">
+                        <div *ngIf="price.invalid" class="alert">
+                            <div *ngIf="price.errors?.['pattern']" class="alert alert-danger">
+                                Price must be a number
+                            </div>
+                        </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class='table_small'>
+            <div class='table_cell'></div>
+            <div class='table_cell'>
+                <button class="btn button-add-row" (click)="editRow(songs[i])">Edit</button>
+                <button class="btn button-add-row" (click)="deleteRow(songs[i])">Delete</button>
+                <button class="btn button-add-row" (click)="saveRow(songs[i])"
+                [disabled]="!title.valid || !artist.valid || !releaseDay.valid || !price.valid">Save</button>   
+            </div>        
+        </div>
+        
+    </div>
+</div>
+
